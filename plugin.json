@@ -1,0 +1,26 @@
+{
+  "apiVersion": 1,
+  "id": "markdown-demo",
+  "name": "Markdown 演示",
+  "version": "0.1.0",
+  "entry": "plugin.mjs",
+  "description": "猫猫机器人（MoeBot）官方插件。最小 Markdown 消息演示：管理员授权后，/md 发送一条 Markdown 示例。",
+  "repository": "https://github.com/AnnaofArendelle/qq-bot-plugin-markdown-demo",
+  "permissions": [
+    "reply.text",
+    "reply.markdown"
+  ],
+  "commands": [
+    {
+      "id": "demo",
+      "triggers": [
+        "/md"
+      ],
+      "description": "发送一条 Markdown 演示消息",
+      "panel": {
+        "order": 200,
+        "description": "发送一条 Markdown 演示消息"
+      }
+    }
+  ]
+}

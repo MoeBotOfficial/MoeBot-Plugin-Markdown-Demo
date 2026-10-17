@@ -1,0 +1,1 @@
+{"type":"object","properties":{"title":{"type":"string","title":"标题","default":"🐱 猫猫机器人 Markdown 演示","minLength":1,"maxLength":60}},"additionalProperties":false}
