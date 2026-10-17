@@ -5,7 +5,7 @@
 ## 用户安装
 
 1. 后端需要 0.8.0 或更新版本。
-2. 从 [Releases](https://github.com/AnnaofArendelle/qq-bot-plugin-markdown-demo/releases) 下载 `markdown-demo-0.1.0.zip`，在 WebUI「插件管理」上传（不要用 GitHub 自动生成的源代码 ZIP）。
+2. 从 [Releases](https://github.com/MoeBotOfficial/MoeBot-Plugin-Markdown-Demo/releases) 下载 `markdown-demo-0.1.0.zip`，在 WebUI「插件管理」上传（不要用 GitHub 自动生成的源代码 ZIP）。
 3. 展开该插件的「插件设置」，勾选「Markdown 消息」（默认关闭），启用插件，点击「保存并部署」。
 4. 在群里发送 `/md` 查看 Markdown 效果；未授权时插件会回复文字提示，引导打开授权。
 
@@ -24,6 +24,6 @@ npm test
 npm run build   # 生成 dist/markdown-demo-0.1.0.zip
 ```
 
-基于 [Plugin SDK](https://github.com/AnnaofArendelle/qq-bot-plugin-sdk) 构建，可对照 daily / essentials 两个官方插件。
+基于 [Plugin SDK](https://github.com/MoeBotOfficial/MoeBot-Plugin-SDK) 构建，可对照 daily / essentials 两个官方插件。
 
 许可证：[MIT](LICENSE)。

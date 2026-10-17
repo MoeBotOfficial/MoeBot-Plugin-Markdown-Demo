@@ -21,7 +21,7 @@ export default definePlugin<{ title: string }>({
       `这里是 **Markdown 消息** 演示，来自 ${channel} 的被动回复。`,
       '',
       '- 支持 **加粗**、*斜体*、~~删除线~~',
-      '- 支持 [链接](https://github.com/AnnaofArendelle/qq-bot-plugin-markdown-demo) 与 `<https://bot.q.qq.com>` 自动链接',
+      '- 支持 [链接](https://github.com/MoeBotOfficial/MoeBot-Plugin-Markdown-Demo) 与 `<https://bot.q.qq.com>` 自动链接',
       '- 支持有序列表：',
       '  1. 插件声明 `reply.markdown` 能力',
       '  2. 管理员在控制台授权',

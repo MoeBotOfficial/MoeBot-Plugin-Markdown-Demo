@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "entry": "plugin.mjs",
   "description": "猫猫机器人（MoeBot）官方插件。最小 Markdown 消息演示：管理员授权后，/md 发送一条 Markdown 示例。",
-  "repository": "https://github.com/AnnaofArendelle/qq-bot-plugin-markdown-demo",
+  "repository": "https://github.com/MoeBotOfficial/MoeBot-Plugin-Markdown-Demo",
   "permissions": [
     "reply.text",
     "reply.markdown"
