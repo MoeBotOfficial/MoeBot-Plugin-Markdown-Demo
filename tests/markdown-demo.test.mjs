@@ -24,3 +24,10 @@ test('degrades to plain text without the grant or on older cores', async () => {
   assert.match(t.replies[0], /尚未获得 Markdown 消息授权/);
   assert.match(t.replies[0], /插件设置/);
 });
+
+ test('command and callback buttons use the SDK grant and interaction interfaces',async()=>{
+ const t=createTestContext({config:{title:'按钮'},command:{id:'buttons'},keyboard:true});await plugin.onCommand(t.context);
+ assert.equal(t.keyboards[0].rows[0].buttons[0].action.type,2);assert.equal(t.keyboards[0].rows[0].buttons[0].action.data,'/md');assert.equal(t.keyboards[0].rows[0].buttons[1].action.type,1);
+ const callback=createTestContext({interaction:{buttonId:'callback-confirm',data:'confirm'}});await plugin.onInteraction(callback.context);assert.deepEqual(callback.responses,[0]);assert.match(callback.replies[0],/按钮回调成功/);
+ const denied=createTestContext({config:{title:'按钮'},command:{id:'buttons'}});await plugin.onCommand(denied.context);assert.match(denied.replies[0],/尚未获得 Markdown 按钮授权/);assert.deepEqual(denied.markdowns,[]);
+ });

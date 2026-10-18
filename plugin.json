@@ -2,13 +2,14 @@
   "apiVersion": 1,
   "id": "markdown-demo",
   "name": "Markdown 演示",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "entry": "plugin.mjs",
-  "description": "猫猫机器人（MoeBot）官方插件。最小 Markdown 消息演示：管理员授权后，/md 发送一条 Markdown 示例。",
+  "description": "猫猫机器人（MoeBot）官方 Markdown 与按钮演示：/md 查看格式，/mdbuttons 体验指令按钮和互动回调。",
   "repository": "https://github.com/MoeBotOfficial/MoeBot-Plugin-Markdown-Demo",
   "permissions": [
     "reply.text",
-    "reply.markdown"
+    "reply.markdown",
+    "reply.keyboard"
   ],
   "commands": [
     {
@@ -20,6 +21,17 @@
       "panel": {
         "order": 200,
         "description": "发送一条 Markdown 演示消息"
+      }
+    },
+    {
+      "id": "buttons",
+      "triggers": [
+        "/mdbuttons"
+      ],
+      "description": "演示 Markdown 指令按钮与回调按钮",
+      "panel": {
+        "order": 201,
+        "description": "演示 Markdown 指令按钮与回调按钮"
       }
     }
   ]

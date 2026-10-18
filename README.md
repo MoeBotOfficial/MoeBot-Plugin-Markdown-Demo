@@ -27,3 +27,11 @@ npm run build   # 生成 dist/markdown-demo-0.1.0.zip
 基于 [Plugin SDK](https://github.com/MoeBotOfficial/MoeBot-Plugin-SDK) 构建，可对照 daily / essentials 两个官方插件。
 
 许可证：[MIT](LICENSE)。
+
+## 0.2.0 按钮演示
+
+最低核心 0.8.1、SDK 1.4.0。在插件设置中同时授权「Markdown 消息」和「Markdown 按钮」，保存并部署。发送 `/mdbuttons`，点击「查看 Markdown」自动发送 `/md`；点击「确认回调」先通过互动接口回应成功，再回复确认文字。未授权时降级为文字提示，原 `/md` 保持兼容。更新插件保留 title、启用状态、范围及现有授权；新增按钮授权默认关闭。
+
+QQ 需要订阅 INTERACTION_CREATE（intent 1 << 26），官方自定义按钮标为「内邀开通」，须确认平台权限。callback data 由核心签名、还原并验证，不进入 AI 或聊天历史。上线后升级或签名密钥轮换会使旧消息按钮失效，重新发送 /mdbuttons 获取新按钮。
+
+验证：npm run typecheck、npm test。测试覆盖无授权降级、两类按钮、回调回应与文本确认，不发送真实 QQ 消息。
